@@ -28,7 +28,7 @@ void setup() {
 void loop() {
   String hydroponic_id = "";
   String server = "";
-  String path = "";
+  String path = "/api/v1/hydroponics_data?token=";
   String json;
 
   const size_t capacity = JSON_OBJECT_SIZE(10);
@@ -63,8 +63,8 @@ void loop() {
   request += "\r\n";
   request += json;
 
-  Serial.println("Antes");
-  Serial.println(request);
+  //Serial.println("Antes");
+  //Serial.println(request);
 
   displayInfo("ENVIANDO DADOS...", -1);
   
